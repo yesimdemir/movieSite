@@ -1,0 +1,380 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 20px 50px 150px;
+  font-size: 13px;
+  text-align: center;
+  background: #F09819;
+  background: -webkit-linear-gradient(to left, #F09819, #EDDE5D);
+  background: linear-gradient(to left, #F09819, #EDDE5D);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  justify-content: start;
+  margin-left: 5px;
+  margin-top: 50px;
+  
+}
+
+.movie {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.movie img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie:hover .heart-icon {
+  opacity: 1;
+}
+
+#my-list {
+
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Alt satıra geçmesini sağlar */
+    gap: 20px; /* Görseller arasındaki boşluğu artırdık */
+    justify-content: start;
+    margin-left: 5px;
+    margin-top: 50px;
+  }
+
+
+#my-list li {
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  
+  
+}
+
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li {
+  font: bold 12px/18px sans-serif;
+  margin-left: 25px;
+  color: #063b08;
+  position: relative;
+  padding: 15px 50px;
+  background: #65de65;
+  cursor: pointer;
+  transition: all 0.2s;
+  float: left;
+  font-family: Montserrat;
+  font-size: medium;
+  border-radius: 15px;
+}
+
+.user{
+  font: bold 12px/18px sans-serif;
+  margin-left: 25px;
+  color: #063b08;
+  position: relative;
+  padding:15px 50px;
+  background: #65de65;
+  cursor: pointer;
+  transition: all 0.2s;
+  float: right;
+  font-family: Montserrat;
+  font-size: medium;
+  border-radius: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gallery {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  justify-content: start;
+  margin-left: 5px;
+  margin-top: 50px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.hdr {
+  color: #563c0e;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: Montserrat;
+  font-style: italic;
+}
+
+#home-gallery {
+  display: grid;
+}
+
+.movie {
+  position: relative;
+  display: inline-block;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: blur(0.1px) brightness(0.8);
+  opacity: 0.8;
+}
+
+ul li:hover {
+  background: #05c595;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  box-shadow: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+ul li ul li {
+  background: #0b5644;
+  display: block;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+  float: center;
+  padding: 20px;
+  width: 100px;
+  box-sizing: border-box;
+  margin: 0.5px;
+  font-family: Montserrat;
+}
+
+ul li ul li:hover {
+  background: #65de65;
+}
+
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+#home-gallery,
+#category-1-gallery,
+#category-2-gallery {
+  display: none;
+}
+
+.gallery img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+#my-list .movie {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+#my-list .movie img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.remove-icon:hover {
+  transform: scale(1.2);
+}
+
+.movie img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#my-list .movie img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#my-list .movie {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie:hover .remove-icon {
+  opacity: 1;
+}
+
+.gallery {
+  display: none;
+}
+
+#home-gallery {
+  display: grid;
+}
+
+.gallery.active {
+  display: block;
+}
+
+#my-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Alt satıra geçmesini sağlar */
+  gap: 30px; /* Ana sayfada olduğu gibi boşlukları ayarlıyoruz */
+  justify-content: start;
+  margin-left: 5px;
+  margin-top: 50px;
+}
+
+#my-list li {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  width: 160px; /* Görsellerin genişliği */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#my-list img {
+  width: 150px; /* Görsellerin genişliği */
+  height: 200px; /* Görsellerin yüksekliği */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.remove-icon:hover {
+  transform: scale(1.2);
+}
+
+.gallery {
+  display: none; /* Tüm galeriler başlangıçta gizli */
+}
+
+.gallery.active {
+  display: grid; /* 'active' sınıfına sahip galeri görünür olur */
+}
+.some-overlapping-div {
+  pointer-events: none; /* Tıklamaları tamamen devre dışı bırakır */
+}

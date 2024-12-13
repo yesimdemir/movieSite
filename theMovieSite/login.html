@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #ffe6e6;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: -1;
+        }
+
+        .login-container {
+            background: linear-gradient(to bottom, pink, purple); /* Sarıdan turuncuya geçiş */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 280px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .login-container input {
+            width: 250px;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            width: 150px;
+            padding: 8px;
+            background-color: rgb(234, 70, 98);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 0 auto; /* Yatayda ortalamak için */
+            display: block; /* margin: auto'nun çalışması için */
+            font-weight: bold;
+            font-size: medium;
+            
+        }
+
+        .login-container button:hover {
+            background-color: rgb(178, 111, 178);
+        }
+
+        #username{
+            font-style: italic;
+        }
+        #password{
+            font-style: italic;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="color: #ffe6e6; font-style: italic; font-weight: 100; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Welcome to The Movie Site</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p class="error" id="error-message"></p>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Sabit bir kullanıcı adı ve şifre
+            const validUsername = 'testuser';
+            const validPassword = '12345';
+
+            if (username === validUsername && password === validPassword) {
+                // Giriş başarılı olursa "Home" sayfasına yönlendir
+                window.location.href = 'home.html';
+            } else {
+                // Hatalı giriş mesajı
+                errorMessage.textContent = 'Invalid username or password!';
+            }
+        }
+    </script>
+</body>
+</html>
